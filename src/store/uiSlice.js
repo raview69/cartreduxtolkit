@@ -1,18 +1,15 @@
-import React from "react";
 import { createSlice } from "@reduxjs/toolkit";
 
-const uiSlice = () => {
-	return createSlice({
-		name: "",
-		initialState: { cartView: false },
-		reducers: {
-			toggle(state) {
-				state.cartView = !state.cartView;
-			},
+const uiSlice = createSlice({
+	name: "ui",
+	initialState: { cartView: false },
+	reducers: {
+		toggle(state) {
+			state.cartView = !state.cartView;
 		},
-	});
-};
+	},
+});
 
-export const uiActions = uiSlice.action;
+export const uiActions = uiSlice.actions;
 
 export default uiSlice;
